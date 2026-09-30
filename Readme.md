@@ -9,7 +9,8 @@
 ## Solution
 * My first step in any forensics challenge is to check the metadata of the image using ```exiftool image.png```
 * The metadata provided a poem in which every capitalized letter spelled out "CHECK LSB"
-* ![The metadata provided a poem in which every capitalized letter spelled out "CHECK LSB"](image.png)
+* ![The metadata provided a poem in which every capitalized letter spelled out "CHECK LSB"](<img width="1457" height="77" alt="image" src="https://github.com/user-attachments/assets/abe7cae2-f1bb-4dc9-84c7-acd82af7aacd" />
+
 * Although I didn't know what LSB was, I still googled "Check lsb of image" and got this website
 * The second hint, ```Red?Ged?Bed?Aed?``` gave me an idea of which checkboxes to click (RGBA)
 * Finally, the output provided me with a base64 string which I decoded using cyberchef and got the flag
@@ -28,7 +29,8 @@ There isn't always a need to install new programs for steganography...most of th
 
 ## Solution
 * As with any forensics challenge, I started by checking the metadata of the image using ```exiftool image.jpg```
-* ![alt text](image-1.png)
+* <img width="1027" height="33" alt="image" src="https://github.com/user-attachments/assets/5fb8fea5-f8f1-4ec7-923e-7c1e50b84608" />
+
 * This was an easier version of the RED challenge, since the metadata directly contained a base64 string
 * I pasted the string into CyberChef, used the "From Base64" operation and got the flag
 
@@ -48,9 +50,11 @@ Always check the metadata first, sometimes the answer is hiding in plain sight
 ## Solution
 * I knew RSA was a cipher, so I went straight to dCode's RSA decoder
 * I entered the values of C, E, N, P and Q provided in the challenge
-* ![alt text](image-2.png)
+* <img width="555" height="527" alt="image" src="https://github.com/user-attachments/assets/9ad50231-826b-44ac-9687-6d7ad710cf6c" />
+
 * Since P and Q were known, dCode computed the private key D by itself and decrypted the message, giving me the flag directly
-* ![alt text](image-3.png)
+*<img width="427" height="122" alt="image" src="https://github.com/user-attachments/assets/2b2dbd48-1d38-4818-b013-ddaac020ce9c" />
+
 * Because the values were already given, I did not need to analyze the provided source code
 
 ## Flag
